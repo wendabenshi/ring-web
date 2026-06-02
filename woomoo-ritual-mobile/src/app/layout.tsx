@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "NFC Tarot Ring — Ritual",
-  description: "A minimal, dark ritual experience for NFC Tarot Ring.",
+  title: "Ritual Portal",
+  description: "Mobile-first ritual tarot flow (mock).",
 };
 
 export default function RootLayout({
@@ -13,9 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex flex-col bg-ink-950 text-zinc-100 font-sans">
-        {children}
-      </body>
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }

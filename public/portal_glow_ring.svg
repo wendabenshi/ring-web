@@ -1,0 +1,38 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0B0612" stop-opacity="1"/>
+      <stop offset="55%" stop-color="#12051F" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="purpleGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="0 0 0 0 0.55
+                0 0 0 0 0.20
+                0 0 0 0 1
+                0 0 0 1 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <circle cx="256" cy="256" r="250" fill="url(#core)"/>
+
+  <circle cx="256" cy="256" r="105" stroke="#8B5CF6" stroke-opacity="0.2" stroke-width="2"/>
+  <circle cx="256" cy="256" r="91" stroke="#A855F7" stroke-opacity="0.75" stroke-width="3" filter="url(#purpleGlow)"/>
+  <circle cx="256" cy="256" r="72" stroke="#7C3AED" stroke-opacity="0.22" stroke-width="1"/>
+
+  <circle cx="256" cy="256" r="122" stroke="#8B5CF6" stroke-opacity="0.14" stroke-width="1" stroke-dasharray="2 16"/>
+  <circle cx="256" cy="256" r="148" stroke="#8B5CF6" stroke-opacity="0.08" stroke-width="1" stroke-dasharray="1 20"/>
+
+  <circle cx="256" cy="256" r="94" stroke="#C084FC" stroke-opacity="0.32" stroke-width="14" filter="url(#softGlow)"/>
+
+  <path d="M278.2 221.5C264.1 218.1 248.9 222.4 238.6 233.3C222.7 250.2 223.4 276.7 240.3 292.6C252.4 304 269.6 307 284.3 301.6C276.9 315.1 262.6 324 246.4 324C222.1 324 202.4 304.3 202.4 280C202.4 255.7 222.1 236 246.4 236C260.1 236 272.4 242.3 280.5 252.1C283.5 241.7 282.4 231 278.2 221.5Z"
+        fill="#C084FC" fill-opacity="0.95" filter="url(#purpleGlow)"/>
+</svg>
